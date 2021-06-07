@@ -15,5 +15,5 @@ LINKS WATCHED:
 2.https://cs50.harvard.edu/web/2020/weeks/1/ - automatic!
 [Git](https://cs50.harvard.edu/web/2020/weeks/1/)
 
-Also I did try to figure out why I am not able to host my site but couldn't do much in that regard.
+Also I did try to figure out why I am not able to host my site but couldn't solve my issue.
 
