@@ -1,9 +1,0 @@
----
-title: June5
-layout: template
-filename: June5.md
---- 
-
-# JUNE5
-
-I resolved my Hugo task.
