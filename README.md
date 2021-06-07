@@ -10,6 +10,7 @@ LINKS WATCHED:
 
 *https://www.youtube.com/watch?v=MJUJ4wbFm_A - automatic!
 [Youtube](https://www.youtube.com/watch?v=MJUJ4wbFm_A)
+
 *https://cs50.harvard.edu/web/2020/weeks/1/ - automatic!
 [Git](https://cs50.harvard.edu/web/2020/weeks/1/)
 
