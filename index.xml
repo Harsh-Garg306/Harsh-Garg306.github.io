@@ -1,19 +1,170 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hello</title>
-    <link>http://example.org/</link>
+    <link>https://Harsh-Garg306.github.io/</link>
     <description>Recent content on Hello</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Jun 2021 20:40:05 +0530</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Jun 2021 23:11:08 +0530</lastBuildDate><atom:link href="https://Harsh-Garg306.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-    <title>My First Post</title>
-    <link>http://example.org/posts/my-first-post/</link>
+    <title>Git</title>
+    <link>https://Harsh-Garg306.github.io/posts/git/</link>
+    <pubDate>Mon, 07 Jun 2021 23:11:08 +0530</pubDate>
+    
+    <guid>https://Harsh-Garg306.github.io/posts/git/</guid>
+    <description>
+        &lt;h1 id=&#34;git&#34;&gt;GIT&lt;/h1&gt;
+&lt;p&gt;1.Git is the most commonly used version control system.&lt;/p&gt;
+&lt;p&gt;2.Git &lt;strong&gt;tracks&lt;/strong&gt; the changes you make to files&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;you have a record of what has been done,&lt;/li&gt;
+&lt;li&gt;can revert to specific versions should you ever need to,&lt;/li&gt;
+&lt;li&gt;it also makes collaboration easier, allowing changes by multiple people to all be merged into one source.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;3.The commands used to keep the track of changes, help in creating new repository and all other functions which you could do on GitHub now can be done on terminal.&lt;/p&gt;
+&lt;p&gt;4.Git is &lt;em&gt;fast&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;5.Multiple backups.&lt;/p&gt;
+&lt;p&gt;6.It is an open source.&lt;/p&gt;
+&lt;p&gt;7.&lt;a href=&#34;https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud&#34;&gt;Git cheat sheets&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;some-useful-links&#34;&gt;Some useful links&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=MJUJ4wbFm_A&#34;&gt;intro to git&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://cs50.harvard.edu/web/2020/weeks/1/&#34;&gt;git&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+    </description>
+    </item>
+    
+    <item>
+    <title>MARKDOWN</title>
+    <link>https://Harsh-Garg306.github.io/posts/markdown/</link>
+    <pubDate>Mon, 07 Jun 2021 22:46:38 +0530</pubDate>
+    
+    <guid>https://Harsh-Garg306.github.io/posts/markdown/</guid>
+    <description>
+        &lt;h1 id=&#34;markdown&#34;&gt;MARKDOWN&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Markdown is a lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform.&lt;/li&gt;
+&lt;li&gt;It was created back in 2004 by John Gruber (of Daring Fireball) as an easy way for non-coders to write in a format that could be easily converted into HTML.&lt;/li&gt;
+&lt;li&gt;Markdown is a way to style text on the web.&lt;/li&gt;
+&lt;li&gt;You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown.&lt;/li&gt;
+&lt;li&gt;Markdown is an easier and faster process of styling webpages than using html.&lt;/li&gt;
+&lt;li&gt;It’s commonly used by writers and programmers to write quickly without having to take time using the formatting toolbar of text editors.&lt;/li&gt;
+&lt;li&gt;It uses #,* instead of angular brackets that are used in html for styling page.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.markdownguide.org/basic-syntax/&#34;&gt;LINK FOR MASTERING MARKDOWN&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+    </description>
+    </item>
+    
+    <item>
+    <title>MYFIRSTGITHUBPAGE</title>
+    <link>https://Harsh-Garg306.github.io/posts/myfirstgithubpage/</link>
+    <pubDate>Mon, 07 Jun 2021 22:29:28 +0530</pubDate>
+    
+    <guid>https://Harsh-Garg306.github.io/posts/myfirstgithubpage/</guid>
+    <description>
+        &lt;h1 id=&#34;myfirstgithubpage&#34;&gt;MYFIRSTGITHUBPAGE&lt;/h1&gt;
+&lt;p&gt;1.Github let me create my first page by using simple steps.&lt;/p&gt;
+&lt;p&gt;2.I used Markdown for styling for githubpage.&lt;/p&gt;
+&lt;p&gt;3.Creating via help of GitHub was really helpful and easy to progress.&lt;/p&gt;
+&lt;p&gt;4.&lt;a href=&#34;https://pages.github.com/&#34;&gt;Just followed this 5 steps to create my first page.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5.&lt;a href=&#34;https://harsh-garg306.github.io/&#34;&gt;My first GitHub page&lt;/a&gt;&lt;/p&gt;
+
+    </description>
+    </item>
+    
+    <item>
+    <title>Github</title>
+    <link>https://Harsh-Garg306.github.io/posts/github/</link>
+    <pubDate>Mon, 07 Jun 2021 21:21:02 +0530</pubDate>
+    
+    <guid>https://Harsh-Garg306.github.io/posts/github/</guid>
+    <description>
+        &lt;h1 id=&#34;github&#34;&gt;GITHUB&lt;/h1&gt;
+&lt;p&gt;1.GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.&lt;/p&gt;
+&lt;p&gt;2.Development of the GitHub.com platform began on &lt;em&gt;October 19, 2007&lt;/em&gt;. The site was launched in April 2008 by Tom Preston-Werner, Chris Wanstrath, P. J. Hyett and Scott Chacon after it had been made available for a few months prior as a beta release.&lt;/p&gt;
+&lt;p&gt;3.&lt;a href=&#34;https://github.com/features&#34;&gt;GITHUB FEATURES&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;4.I learned various concepts in GitHub which are as follows:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;repository&#34;&gt;REPOSITORY&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;It is used to organize a single project.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It can contain folders, images, videos and any other thing that our project requires.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;to-create-a-repository&#34;&gt;To create a repository&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;follow this link &lt;a href=&#34;https://guides.github.com/activities/hello-world/&#34;&gt;hello to github&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;branching&#34;&gt;BRANCHING&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Branching&lt;/em&gt; is the way to work on different versions of a repository at one time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;By default &lt;strong&gt;main&lt;/strong&gt; branch is created and to avoid edits to the main branch directly we do branching.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;to-create-a-new-branch&#34;&gt;To create a new branch&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;head over to this link &lt;a href=&#34;https://guides.github.com/activities/hello-world/&#34;&gt;hello to github&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-to-commit-changes&#34;&gt;HOW TO COMMIT CHANGES&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;saved changes are called commits.&lt;/li&gt;
+&lt;li&gt;Each commit has an associated &lt;em&gt;commit message&lt;/em&gt;, which is a description explaining why a particular change was made.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;pull-request&#34;&gt;PULL REQUEST&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Pull requests allows others to review your changes and pull in your contribution.&lt;/li&gt;
+&lt;li&gt;It shows differences of the content from both branches.&lt;/li&gt;
+&lt;li&gt;As soon as you make a commit, you can open a pull request and start a discussion, even before the code is finished.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;merging-pull-request&#34;&gt;MERGING PULL REQUEST&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;head over to this link &lt;a href=&#34;https://guides.github.com/activities/hello-world/&#34;&gt;merge pull request&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;4.&lt;a href=&#34;https://guides.github.com/introduction/flow/&#34;&gt;review this link for complete information&lt;/a&gt;&lt;/p&gt;
+
+    </description>
+    </item>
+    
+    <item>
+    <title>June 6</title>
+    <link>https://Harsh-Garg306.github.io/posts/june6/</link>
     <pubDate>Sun, 06 Jun 2021 20:40:05 +0530</pubDate>
     
-    <guid>http://example.org/posts/my-first-post/</guid>
+    <guid>https://Harsh-Garg306.github.io/posts/june6/</guid>
     <description>
-        
+        &lt;h1 id=&#34;hugo&#34;&gt;HUGO&lt;/h1&gt;
+&lt;p&gt;1.Hugo is really helpful in creating static sites.&lt;/p&gt;
+&lt;p&gt;2.Static sites are those sites whose content doesn&amp;rsquo;t change for any user. The content viewed by any individual at any time remains the same.&lt;/p&gt;
+&lt;p&gt;3.It supports various themes which can be downloaded from &lt;strong&gt;github&lt;/strong&gt; &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;link to themes!&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;created-a-new-file-june6&#34;&gt;Created a new file &lt;strong&gt;JUNE6&lt;/strong&gt;.&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/PM43L53Hl0iGCNT59IZ367MIM&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/PM43L53Hl0iGCNT59IZ367MIM.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;added-the-theme&#34;&gt;Added the theme&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/QslnRtXThRFxHDzzW2jiXLWnX&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/QslnRtXThRFxHDzzW2jiXLWnX.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;problem-faced-in-creating-first-post&#34;&gt;problem faced in creating first post&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/iWrvJ4xduvzv19eJwDyyOmurC&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/iWrvJ4xduvzv19eJwDyyOmurC.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Solved the issue by downloading the theme as zip file and copied in the same directory.&lt;/p&gt;
+&lt;h2 id=&#34;final-step&#34;&gt;final step&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/0rPoOjQNvQMmjZScWCS0XmvSZ&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/0rPoOjQNvQMmjZScWCS0XmvSZ.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
     </description>
     </item>
     
