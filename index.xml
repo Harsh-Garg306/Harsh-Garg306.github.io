@@ -5,7 +5,25 @@
     <description>Recent content on Hello</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Jun 2021 23:11:08 +0530</lastBuildDate><atom:link href="https://Harsh-Garg306.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Jun 2021 15:54:48 +0530</lastBuildDate><atom:link href="https://Harsh-Garg306.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+    <title>June9</title>
+    <link>https://Harsh-Garg306.github.io/posts/june9/</link>
+    <pubDate>Thu, 10 Jun 2021 15:54:48 +0530</pubDate>
+    
+    <guid>https://Harsh-Garg306.github.io/posts/june9/</guid>
+    <description>
+        &lt;h1 id=&#34;hosting-the-site&#34;&gt;Hosting the site&lt;/h1&gt;
+&lt;h2 id=&#34;adding-files-to-public-and-then-pushing-it-to-master&#34;&gt;adding files to public and then pushing it to master&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/3m3BX5pQmOttMBXCyxPQX9zjN&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/3m3BX5pQmOttMBXCyxPQX9zjN.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;commits-adding-files-to-public&#34;&gt;commits: adding files to public&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/zRASZjxdh894782UB057KRRW4&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/zRASZjxdh894782UB057KRRW4.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;site-is-ready-to-be-published&#34;&gt;site is ready to be published&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://harsh-garg306.github.io/&#34;&gt;Open the site&lt;/a&gt;&lt;/p&gt;
+
+    </description>
+    </item>
+    
     <item>
     <title>Git</title>
     <link>https://Harsh-Garg306.github.io/posts/git/</link>
