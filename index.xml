@@ -5,7 +5,28 @@
     <description>Recent content on Hello</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Jun 2021 15:54:48 +0530</lastBuildDate><atom:link href="https://Harsh-Garg306.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jun 2021 15:28:34 +0530</lastBuildDate><atom:link href="https://Harsh-Garg306.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+    <title>JUNE29</title>
+    <link>https://Harsh-Garg306.github.io/posts/june29/</link>
+    <pubDate>Wed, 30 Jun 2021 15:28:34 +0530</pubDate>
+    
+    <guid>https://Harsh-Garg306.github.io/posts/june29/</guid>
+    <description>
+        &lt;h1 id=&#34;creating-a-vm-in-aws-using-terraform&#34;&gt;Creating a VM in AWS using Terraform&lt;/h1&gt;
+&lt;p&gt;1.aws configure&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;enter your access and secret keys&lt;/li&gt;
+&lt;li&gt;enter your region.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2.Each Terraform configuration must be in its own working directory.Change to working directory.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/5OLrX4qjp9Mf4bx2JPQN2FUtp&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/5OLrX4qjp9Mf4bx2JPQN2FUtp.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+    </description>
+    </item>
+    
     <item>
     <title>June9</title>
     <link>https://Harsh-Garg306.github.io/posts/june9/</link>

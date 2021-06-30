@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Hello</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Jun 2021 15:54:48 +0530</lastBuildDate><atom:link href="https://Harsh-Garg306.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jun 2021 15:28:34 +0530</lastBuildDate><atom:link href="https://Harsh-Garg306.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JUNE29</title>
+      <link>https://Harsh-Garg306.github.io/posts/june29/</link>
+      <pubDate>Wed, 30 Jun 2021 15:28:34 +0530</pubDate>
+      
+      <guid>https://Harsh-Garg306.github.io/posts/june29/</guid>
+      <description>Creating a VM in AWS using Terraform 1.aws configure
+  enter your access and secret keys enter your region.   2.Each Terraform configuration must be in its own working directory.Change to working directory.</description>
+    </item>
+    
     <item>
       <title>June9</title>
       <link>https://Harsh-Garg306.github.io/posts/june9/</link>
