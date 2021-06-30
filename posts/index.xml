@@ -14,7 +14,16 @@
       
       <guid>https://Harsh-Garg306.github.io/posts/june29/</guid>
       <description>Creating a VM in AWS using Terraform 1.aws configure
-  enter your access and secret keys enter your region.   2.Each Terraform configuration must be in its own working directory.Change to working directory.</description>
+  enter your access and secret keys enter your region.   2.Each Terraform configuration must be in its own working directory.Change to working directory.
+
+3.Create a file to define your infrastructure.
+
+4.Open the file and add the contents into it.
+! [Alt text](/var/folders/9y/3g252s3518vfbq7qw_776hlw0000gn/T/TemporaryItems/NSIRD_screencaptureui_zXgJsu/Screenshot 2021-06-30 at 4.44.18 PM.png)
+5.Initialize the directory
+
+6.Format and validate the configuration
+  The command updates configurations in the current directory.</description>
     </item>
     
     <item>
