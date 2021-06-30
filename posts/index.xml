@@ -18,12 +18,10 @@
 
 3.Create a file to define your infrastructure.
 
-4.Open the file and add the contents into it.
-! [Alt text](/var/folders/9y/3g252s3518vfbq7qw_776hlw0000gn/T/TemporaryItems/NSIRD_screencaptureui_zXgJsu/Screenshot 2021-06-30 at 4.44.18 PM.png)
-5.Initialize the directory
+4.Initialize the directory
 
-6.Format and validate the configuration
-  The command updates configurations in the current directory.</description>
+5.Format and validate the configuration
+  The command updates configurations in the current directory. If the file was already formatted correctly, Terraform won’t return any output.</description>
     </item>
     
     <item>

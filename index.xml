@@ -25,11 +25,9 @@
 &lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/5OLrX4qjp9Mf4bx2JPQN2FUtp&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/5OLrX4qjp9Mf4bx2JPQN2FUtp.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;3.Create a file to define your infrastructure.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/Uz4a91hVP5w9s0HjJojJ3OXLu&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/Uz4a91hVP5w9s0HjJojJ3OXLu.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;4.Open the file and add the contents into it.&lt;/p&gt;
-&lt;p&gt;! [Alt text](/var/folders/9y/3g252s3518vfbq7qw_776hlw0000gn/T/TemporaryItems/NSIRD_screencaptureui_zXgJsu/Screenshot 2021-06-30 at 4.44.18 PM.png)&lt;/p&gt;
-&lt;p&gt;5.Initialize the directory&lt;/p&gt;
+&lt;p&gt;4.Initialize the directory&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/XrukLFKNb2hZP8c2ZyfNml601&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/XrukLFKNb2hZP8c2ZyfNml601.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;6.Format and validate the configuration&lt;/p&gt;
+&lt;p&gt;5.Format and validate the configuration&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;The command updates configurations in the current directory. If the file was already formatted correctly, Terraform won’t return any output. Otherwise, it would print out the names of the files it modified after the command was used.&lt;/li&gt;
@@ -37,7 +35,7 @@
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/wuCEELZRpIf1Yq33oczFwatFS&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/wuCEELZRpIf1Yq33oczFwatFS.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Got an &lt;strong&gt;error&lt;/strong&gt; , solved using changing .tf file by changing the tag name.&lt;/p&gt;
-&lt;p&gt;7.finally launched an EC2 instance&lt;/p&gt;
+&lt;p&gt;6.finally launched an EC2 instance&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/cphO8yiPOwdpaXsCHXYGha1k6&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/cphO8yiPOwdpaXsCHXYGha1k6.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
     </description>
