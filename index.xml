@@ -5,7 +5,66 @@
     <description>Recent content on Hello</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Jul 2021 11:29:04 +0530</lastBuildDate><atom:link href="https://Harsh-Garg306.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jul 2021 13:03:36 +0530</lastBuildDate><atom:link href="https://Harsh-Garg306.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+    <title>GITREBASEvsMERGE</title>
+    <link>https://Harsh-Garg306.github.io/posts/gitrebasevsmerge/</link>
+    <pubDate>Thu, 08 Jul 2021 13:03:36 +0530</pubDate>
+    
+    <guid>https://Harsh-Garg306.github.io/posts/gitrebasevsmerge/</guid>
+    <description>
+        &lt;h2 id=&#34;git-rebase-vs-git-merge&#34;&gt;GIT REBASE vs GIT MERGE&lt;/h2&gt;
+&lt;h3 id=&#34;made-a-file-and-added-the-file-learntxt&#34;&gt;Made a file and added the file learn.txt&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/FCqvak14lKXhLB5kocFmIDvbO&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/FCqvak14lKXhLB5kocFmIDvbO.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Verifying using :&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git log
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/9w93eewtIcu2Wt5zaZ5rrFcxX&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/9w93eewtIcu2Wt5zaZ5rrFcxX.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;initially-we-have-no-branch-except-master&#34;&gt;initially we have no branch except master&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;git branch
+This command shows how many branches are present and on which branch we are present. 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/GvoUYxsm1INozlbyRYFvuM5JB&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/GvoUYxsm1INozlbyRYFvuM5JB.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;git branch shows the branch on which we are present which is shown by branch name preceded by asterisk.&lt;/p&gt;
+&lt;h3 id=&#34;made-feature-branch&#34;&gt;made feature branch&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;git branch branch_name
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;switch-from-one-branch-to-another&#34;&gt;switch from one branch to another&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;git checkout branch_name
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;checkout command will take us to the branch whose name we entered in the &amp;ldquo;git checkout branch_name&amp;rdquo; command.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/RjUrmChmeg5Ex0PX7UhxxX0ph&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/RjUrmChmeg5Ex0PX7UhxxX0ph.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;adding-first-commit-on-feature-branch&#34;&gt;adding first commit on feature branch&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/xFow0V55uVG1z6Uas4HMjs0q9&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/xFow0V55uVG1z6Uas4HMjs0q9.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;updating-master-branch-with-second-commit&#34;&gt;updating master branch with second commit&lt;/h3&gt;
+&lt;p&gt;See status by:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git log
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/K08mjXe0EwSlVSyjQvqJb85CQ&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/K08mjXe0EwSlVSyjQvqJb85CQ.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;updating-feature-branch-with-second-commit&#34;&gt;updating feature branch with second commit&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/OAfeRsRwcijY7MnOs3GB7mePP&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/OAfeRsRwcijY7MnOs3GB7mePP.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And confirming commit status by git log&lt;/p&gt;
+&lt;h3 id=&#34;updating-feature-branch-further&#34;&gt;updating feature branch further&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/Xekvcbm97KUoA8sgyIOSM2TM0&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/Xekvcbm97KUoA8sgyIOSM2TM0.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So as of now we are in the following condition:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Master branch has 2 commits:
+second commit
+added lessgo.txt
+
+feature branch is updated as:
+fourth commit
+third commit
+second commit
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;updated-master-branch-with-m3-master-3rd-commit&#34;&gt;updated master branch with &amp;ldquo;M3 master 3rd commit&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/2D18BKEJArAF0Mik1Zuxv427A&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/2D18BKEJArAF0Mik1Zuxv427A.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now the most recent commit in master branch is &lt;strong&gt;M3 master 3rd commit&lt;/strong&gt; and feature branch has &lt;strong&gt;fourth commit&lt;/strong&gt; and now we want the commmit history as:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;fourth commit
+M3 master 3rd commit
+second commit
+added lessgo.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To get the above status and Combining the recent commits and for a clear history of commit we use:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git rebase branch_name
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/SfGxWUW6NKgTXrNHBkPRnUYgd&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/SfGxWUW6NKgTXrNHBkPRnUYgd.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I got an error as the first commit on feature branch was not merged so we need to remove the first commit on feature branch and as the feature branch was based on second commit of master branch so the first commit on feature is needed to be removed and we will get the desired output.&lt;/p&gt;
+
+    </description>
+    </item>
+    
     <item>
     <title>JUNE30</title>
     <link>https://Harsh-Garg306.github.io/posts/june30/</link>

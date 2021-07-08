@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="dark">
+    <title> GITREBASEvsMERGE | Hello</title>
+    
+    
+    
+    <link rel="stylesheet" href="/sass/main.min.f04d6b44ad8057618134657fa2f7daf40049602e40aab05c5a2a3d511698a11c.css">
+</head>
+
+    <body class="dark">
+        <nav class="navbar">
+    <div class="container">
+        <div class="flex">
+            <div>
+                <a class="brand" href="/">
+                    
+                    Hello
+                    </a>
+            </div>
+            <div class="flex">
+                
+                <button id="dark-mode-button"></button>
+            </div>
+            </div>
+    </div>
+</nav>
+        <main>
+            
+
+<div class="container">
+    <article>
+        <header class="article-header">
+            <div class="thumb">
+                <div>
+                    <h1>GITREBASEvsMERGE</h1>
+                    <div class="post-meta">
+                        <div>
+                            By  on <time>July 08, 2021</time>
+                        </div>
+                        <div class="tags">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </article>
+
+    <div class="article-post">
+    <h2 id="git-rebase-vs-git-merge">GIT REBASE vs GIT MERGE</h2>
+<h3 id="made-a-file-and-added-the-file-learntxt">Made a file and added the file learn.txt</h3>
+<p><a href="https://asciinema.org/a/FCqvak14lKXhLB5kocFmIDvbO"><img src="https://asciinema.org/a/FCqvak14lKXhLB5kocFmIDvbO.svg" alt="asciicast"></a></p>
+<p>Verifying using :</p>
+<pre><code>git log
+</code></pre><p><a href="https://asciinema.org/a/9w93eewtIcu2Wt5zaZ5rrFcxX"><img src="https://asciinema.org/a/9w93eewtIcu2Wt5zaZ5rrFcxX.svg" alt="asciicast"></a></p>
+<h3 id="initially-we-have-no-branch-except-master">initially we have no branch except master</h3>
+<pre><code>git branch
+This command shows how many branches are present and on which branch we are present. 
+</code></pre><p><a href="https://asciinema.org/a/GvoUYxsm1INozlbyRYFvuM5JB"><img src="https://asciinema.org/a/GvoUYxsm1INozlbyRYFvuM5JB.svg" alt="asciicast"></a></p>
+<p>git branch shows the branch on which we are present which is shown by branch name preceded by asterisk.</p>
+<h3 id="made-feature-branch">made feature branch</h3>
+<pre><code>git branch branch_name
+</code></pre><h3 id="switch-from-one-branch-to-another">switch from one branch to another</h3>
+<pre><code>git checkout branch_name
+</code></pre><p>checkout command will take us to the branch whose name we entered in the &ldquo;git checkout branch_name&rdquo; command.</p>
+<p><a href="https://asciinema.org/a/RjUrmChmeg5Ex0PX7UhxxX0ph"><img src="https://asciinema.org/a/RjUrmChmeg5Ex0PX7UhxxX0ph.svg" alt="asciicast"></a></p>
+<h3 id="adding-first-commit-on-feature-branch">adding first commit on feature branch</h3>
+<p><a href="https://asciinema.org/a/xFow0V55uVG1z6Uas4HMjs0q9"><img src="https://asciinema.org/a/xFow0V55uVG1z6Uas4HMjs0q9.svg" alt="asciicast"></a></p>
+<h3 id="updating-master-branch-with-second-commit">updating master branch with second commit</h3>
+<p>See status by:</p>
+<pre><code>git log
+</code></pre><p><a href="https://asciinema.org/a/K08mjXe0EwSlVSyjQvqJb85CQ"><img src="https://asciinema.org/a/K08mjXe0EwSlVSyjQvqJb85CQ.svg" alt="asciicast"></a></p>
+<h3 id="updating-feature-branch-with-second-commit">updating feature branch with second commit</h3>
+<p><a href="https://asciinema.org/a/OAfeRsRwcijY7MnOs3GB7mePP"><img src="https://asciinema.org/a/OAfeRsRwcijY7MnOs3GB7mePP.svg" alt="asciicast"></a></p>
+<p>And confirming commit status by git log</p>
+<h3 id="updating-feature-branch-further">updating feature branch further</h3>
+<p><a href="https://asciinema.org/a/Xekvcbm97KUoA8sgyIOSM2TM0"><img src="https://asciinema.org/a/Xekvcbm97KUoA8sgyIOSM2TM0.svg" alt="asciicast"></a></p>
+<p>So as of now we are in the following condition:</p>
+<pre><code>Master branch has 2 commits:
+second commit
+added lessgo.txt
+
+feature branch is updated as:
+fourth commit
+third commit
+second commit
+</code></pre><h3 id="updated-master-branch-with-m3-master-3rd-commit">updated master branch with &ldquo;M3 master 3rd commit&rdquo;</h3>
+<p><a href="https://asciinema.org/a/2D18BKEJArAF0Mik1Zuxv427A"><img src="https://asciinema.org/a/2D18BKEJArAF0Mik1Zuxv427A.svg" alt="asciicast"></a></p>
+<p>Now the most recent commit in master branch is <strong>M3 master 3rd commit</strong> and feature branch has <strong>fourth commit</strong> and now we want the commmit history as:</p>
+<pre><code>fourth commit
+M3 master 3rd commit
+second commit
+added lessgo.txt
+</code></pre><p>To get the above status and Combining the recent commits and for a clear history of commit we use:</p>
+<pre><code>git rebase branch_name
+</code></pre><p><a href="https://asciinema.org/a/SfGxWUW6NKgTXrNHBkPRnUYgd"><img src="https://asciinema.org/a/SfGxWUW6NKgTXrNHBkPRnUYgd.svg" alt="asciicast"></a></p>
+<p>I got an error as the first commit on feature branch was not merged so we need to remove the first commit on feature branch and as the feature branch was based on second commit of master branch so the first commit on feature is needed to be removed and we will get the desired output.</p>
+
+    </div>
+</div>
+
+<div class="container">
+    
+    <nav class="flex container suggested">
+        
+        <a rel="prev" href="/posts/june30/" title="Previous post (older)">
+            <span>Previous</span>
+            JUNE30
+            </a>
+        
+        
+        
+    </nav>
+    
+</div>
+</main>
+
+
+        </main>
+        <footer class="footer flex">
+    <section class="container">
+        <nav class="footer-links">
+            
+        </nav>
+    </section>
+    
+    <script async src="/js/features.min.cb54200d744e5e9da0fa39e8ed570c19eac326f18a67904837ffada21795dfe2.js" data-enable-footnotes="true"></script>
+</footer>
+    </body>
+</html>
