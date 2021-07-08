@@ -6,14 +6,27 @@
     <description>Recent content in Posts on Hello</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Jun 2021 15:28:34 +0530</lastBuildDate><atom:link href="https://Harsh-Garg306.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jul 2021 11:29:04 +0530</lastBuildDate><atom:link href="https://Harsh-Garg306.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JUNE30</title>
+      <link>https://Harsh-Garg306.github.io/posts/june30/</link>
+      <pubDate>Thu, 08 Jul 2021 11:29:04 +0530</pubDate>
+      
+      <guid>https://Harsh-Garg306.github.io/posts/june30/</guid>
+      <description>Creating a VPC using terraform Make the necessary files Create a new directory and change to newly created directory.
+mkdir terraform-vpc_1 cd terraform-vpc_1 1.Now create a new file in the same directory i.e. main.tf
+
+The configuration that we will write in the file will do 4 things:
+  Create a VPC Create an Internet Gateway &amp;amp; attach it to the VPC Create both public &amp;amp; private subnets Create a NAT Gateway Create a route table   The Internet gateway allows the traffic within the VPC to be accessible to other users.</description>
+    </item>
+    
     <item>
       <title>JUNE29</title>
       <link>https://Harsh-Garg306.github.io/posts/june29/</link>
       <pubDate>Wed, 30 Jun 2021 15:28:34 +0530</pubDate>
       
       <guid>https://Harsh-Garg306.github.io/posts/june29/</guid>
-      <description>Creating a VM in AWS using Terraform 1.aws configure
+      <description>Creating a VM in AWS using Terraform 1.aws configure (don&amp;rsquo;t release these keys)
   enter your access and secret keys enter your region.   2.Each Terraform configuration must be in its own working directory.Change to working directory.
 
 3.Create a file to define your infrastructure.

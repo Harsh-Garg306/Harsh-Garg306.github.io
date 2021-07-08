@@ -5,7 +5,126 @@
     <description>Recent content on Hello</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Jun 2021 15:28:34 +0530</lastBuildDate><atom:link href="https://Harsh-Garg306.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jul 2021 11:29:04 +0530</lastBuildDate><atom:link href="https://Harsh-Garg306.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+    <title>JUNE30</title>
+    <link>https://Harsh-Garg306.github.io/posts/june30/</link>
+    <pubDate>Thu, 08 Jul 2021 11:29:04 +0530</pubDate>
+    
+    <guid>https://Harsh-Garg306.github.io/posts/june30/</guid>
+    <description>
+        &lt;h1 id=&#34;creating-a-vpc-using-terraform&#34;&gt;Creating a VPC using terraform&lt;/h1&gt;
+&lt;h2 id=&#34;make-the-necessary-files&#34;&gt;Make the necessary files&lt;/h2&gt;
+&lt;p&gt;Create a new directory and change to newly created directory.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mkdir terraform-vpc_1
+cd terraform-vpc_1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;1.Now create a new file in the same directory i.e. main.tf&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/U2062dWWmZnkYjo1mP8HGLPpK&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/U2062dWWmZnkYjo1mP8HGLPpK.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The configuration that we will write in the file will do 4 things:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a VPC&lt;/li&gt;
+&lt;li&gt;Create an Internet Gateway &amp;amp; attach it to the VPC&lt;/li&gt;
+&lt;li&gt;Create both public &amp;amp; private subnets&lt;/li&gt;
+&lt;li&gt;Create a NAT Gateway&lt;/li&gt;
+&lt;li&gt;Create a route table&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The Internet gateway allows the traffic within the VPC to be accessible to other users. The NAT gateway will allow private subnets to reach out to the internet without needing an externally routable IP address. The route table keeps track of paths, and determines where to forward traffic.&lt;/p&gt;
+&lt;p&gt;The contents of the main.tf file:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Create a VPC
+   resource &amp;quot;aws_vpc&amp;quot; &amp;quot;Main&amp;quot; {               
+   cidr_block       = var.main_vpc_cidr     
+   instance_tenancy = &amp;quot;default&amp;quot;
+ }
+ Create Internet Gateway and attach it to VPC
+   resource &amp;quot;aws_internet_gateway&amp;quot; &amp;quot;IGW&amp;quot; {   
+   vpc_id =  aws_vpc.Main.id               
+ }
+ Create a Public Subnets.
+   resource &amp;quot;aws_subnet&amp;quot; &amp;quot;publicsubnets&amp;quot; {   
+   vpc_id =  aws_vpc.Main.id
+   cidr_block = &amp;quot;${var.public_subnets}&amp;quot;        
+ }
+ Create a Private Subnet                  
+   resource &amp;quot;aws_subnet&amp;quot; &amp;quot;privatesubnets&amp;quot; {
+   vpc_id =  aws_vpc.Main.id
+   cidr_block = &amp;quot;${var.private_subnets}&amp;quot;          
+ }
+ Route table for Public Subnet&#39;s
+    resource &amp;quot;aws_route_table&amp;quot; &amp;quot;PublicRT&amp;quot; {    
+    vpc_id =  aws_vpc.Main.id
+         route {
+    cidr_block = &amp;quot;0.0.0.0/0&amp;quot;               
+    gateway_id = aws_internet_gateway.IGW.id
+     }
+ }
+ Route table for Private Subnet&#39;s
+   resource &amp;quot;aws_route_table&amp;quot; &amp;quot;PrivateRT&amp;quot; {    
+   vpc_id = aws_vpc.Main.id
+   route {
+   cidr_block = &amp;quot;0.0.0.0/0&amp;quot;             
+   nat_gateway_id = aws_nat_gateway.NATgw.id
+   }
+ }
+ Route table Association with Public Subnet&#39;s
+    resource &amp;quot;aws_route_table_association&amp;quot; &amp;quot;PublicRTassociation&amp;quot; {
+    subnet_id = aws_subnet.publicsubnets.id
+    route_table_id = aws_route_table.PublicRT.id
+ }
+ Route table Association with Private Subnet&#39;s
+    resource &amp;quot;aws_route_table_association&amp;quot; &amp;quot;PrivateRTassociation&amp;quot; {
+    subnet_id = aws_subnet.privatesubnets.id
+    route_table_id = aws_route_table.PrivateRT.id
+ }
+ resource &amp;quot;aws_eip&amp;quot; &amp;quot;nateIP&amp;quot; {
+   vpc   = true
+ }
+ Creating the NAT Gateway using subnet_id and allocation_id
+   resource &amp;quot;aws_nat_gateway&amp;quot; &amp;quot;NATgw&amp;quot; {
+   allocation_id = aws_eip.nateIP.id
+   subnet_id = aws_subnet.publicsubnets.id
+ }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;2.Create a vars.tf&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;touch vars.tf
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Contents of this file:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;variable &amp;quot;region&amp;quot; {}
+ variable &amp;quot;main_vpc_cidr&amp;quot; {}
+ variable &amp;quot;public_subnets&amp;quot; {}
+ variable &amp;quot;private_subnets&amp;quot; {}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;3.Now create a provider.tf&lt;/p&gt;
+&lt;p&gt;Contents of this file are:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; provider &amp;quot;aws&amp;quot; {
+   region = &amp;quot;us-east-2&amp;quot;
+   profile = default
+ }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The profile = &amp;ldquo;default&amp;rdquo; command is a way for Terraform to get the AWS credentials i.e. access and secret keys.&lt;/p&gt;
+&lt;p&gt;4.Last file to create is terraform.tfvars.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;main_vpc_cidr = &amp;quot;10.0.0.0/24&amp;quot;
+ public_subnets = &amp;quot;10.0.0.128/26&amp;quot;
+ private_subnets = &amp;quot;10.0.0.192/26&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;see-files-inside-the-directory&#34;&gt;See files inside the directory&lt;/h2&gt;
+&lt;p&gt;Use the command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ls -l
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/SoVAXNm1brFbOnimqhAVO06YZ&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/SoVAXNm1brFbOnimqhAVO06YZ.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;run-terraform-to-create-vac&#34;&gt;Run terraform to create vac&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/hxIfendPpQtnsD7usghXzQmbB&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/hxIfendPpQtnsD7usghXzQmbB.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Got an error and to remove the error we need to remove the headings in the main.tf file .
+Error is &lt;em&gt;solved&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/xcrxTPn2C0vWih57Zw6QGM0sa&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/xcrxTPn2C0vWih57Zw6QGM0sa.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;next-perform-terraform-plan&#34;&gt;Next perform terraform plan&lt;/h2&gt;
+&lt;p&gt;We got an error as in the provider file I didn&amp;rsquo;t put double quotes under profile. Error was resolved by :&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;profile=&amp;quot;default&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;now-we-need-to-apply-the-changes&#34;&gt;Now we need to apply the changes&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;terraform apply
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;terraform will read the configuration (main.tf) and the other files to compile a configuration. It will then send that configuration up to AWS as instructions to build the VPC.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/kbsCdVF8jN1BTGqViWcRuaaPx&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/kbsCdVF8jN1BTGqViWcRuaaPx.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+    </description>
+    </item>
+    
     <item>
     <title>JUNE29</title>
     <link>https://Harsh-Garg306.github.io/posts/june29/</link>
@@ -14,7 +133,7 @@
     <guid>https://Harsh-Garg306.github.io/posts/june29/</guid>
     <description>
         &lt;h1 id=&#34;creating-a-vm-in-aws-using-terraform&#34;&gt;Creating a VM in AWS using Terraform&lt;/h1&gt;
-&lt;p&gt;1.aws configure&lt;/p&gt;
+&lt;p&gt;1.aws configure (don&amp;rsquo;t release these keys)&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;enter your access and secret keys&lt;/li&gt;

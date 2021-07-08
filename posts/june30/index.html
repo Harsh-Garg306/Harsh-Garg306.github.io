@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="dark">
+    <title> JUNE30 | Hello</title>
+    
+    
+    
+    <link rel="stylesheet" href="/sass/main.min.f04d6b44ad8057618134657fa2f7daf40049602e40aab05c5a2a3d511698a11c.css">
+</head>
+
+    <body class="dark">
+        <nav class="navbar">
+    <div class="container">
+        <div class="flex">
+            <div>
+                <a class="brand" href="/">
+                    
+                    Hello
+                    </a>
+            </div>
+            <div class="flex">
+                
+                <button id="dark-mode-button"></button>
+            </div>
+            </div>
+    </div>
+</nav>
+        <main>
+            
+
+<div class="container">
+    <article>
+        <header class="article-header">
+            <div class="thumb">
+                <div>
+                    <h1>JUNE30</h1>
+                    <div class="post-meta">
+                        <div>
+                            By  on <time>July 08, 2021</time>
+                        </div>
+                        <div class="tags">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </article>
+
+    <div class="article-post">
+    <h1 id="creating-a-vpc-using-terraform">Creating a VPC using terraform</h1>
+<h2 id="make-the-necessary-files">Make the necessary files</h2>
+<p>Create a new directory and change to newly created directory.</p>
+<pre><code>mkdir terraform-vpc_1
+cd terraform-vpc_1
+</code></pre><p>1.Now create a new file in the same directory i.e. main.tf</p>
+<p><a href="https://asciinema.org/a/U2062dWWmZnkYjo1mP8HGLPpK"><img src="https://asciinema.org/a/U2062dWWmZnkYjo1mP8HGLPpK.svg" alt="asciicast"></a></p>
+<p>The configuration that we will write in the file will do 4 things:</p>
+<blockquote>
+<ul>
+<li>Create a VPC</li>
+<li>Create an Internet Gateway &amp; attach it to the VPC</li>
+<li>Create both public &amp; private subnets</li>
+<li>Create a NAT Gateway</li>
+<li>Create a route table</li>
+</ul>
+</blockquote>
+<p>The Internet gateway allows the traffic within the VPC to be accessible to other users. The NAT gateway will allow private subnets to reach out to the internet without needing an externally routable IP address. The route table keeps track of paths, and determines where to forward traffic.</p>
+<p>The contents of the main.tf file:</p>
+<pre><code>Create a VPC
+   resource &quot;aws_vpc&quot; &quot;Main&quot; {               
+   cidr_block       = var.main_vpc_cidr     
+   instance_tenancy = &quot;default&quot;
+ }
+ Create Internet Gateway and attach it to VPC
+   resource &quot;aws_internet_gateway&quot; &quot;IGW&quot; {   
+   vpc_id =  aws_vpc.Main.id               
+ }
+ Create a Public Subnets.
+   resource &quot;aws_subnet&quot; &quot;publicsubnets&quot; {   
+   vpc_id =  aws_vpc.Main.id
+   cidr_block = &quot;${var.public_subnets}&quot;        
+ }
+ Create a Private Subnet                  
+   resource &quot;aws_subnet&quot; &quot;privatesubnets&quot; {
+   vpc_id =  aws_vpc.Main.id
+   cidr_block = &quot;${var.private_subnets}&quot;          
+ }
+ Route table for Public Subnet's
+    resource &quot;aws_route_table&quot; &quot;PublicRT&quot; {    
+    vpc_id =  aws_vpc.Main.id
+         route {
+    cidr_block = &quot;0.0.0.0/0&quot;               
+    gateway_id = aws_internet_gateway.IGW.id
+     }
+ }
+ Route table for Private Subnet's
+   resource &quot;aws_route_table&quot; &quot;PrivateRT&quot; {    
+   vpc_id = aws_vpc.Main.id
+   route {
+   cidr_block = &quot;0.0.0.0/0&quot;             
+   nat_gateway_id = aws_nat_gateway.NATgw.id
+   }
+ }
+ Route table Association with Public Subnet's
+    resource &quot;aws_route_table_association&quot; &quot;PublicRTassociation&quot; {
+    subnet_id = aws_subnet.publicsubnets.id
+    route_table_id = aws_route_table.PublicRT.id
+ }
+ Route table Association with Private Subnet's
+    resource &quot;aws_route_table_association&quot; &quot;PrivateRTassociation&quot; {
+    subnet_id = aws_subnet.privatesubnets.id
+    route_table_id = aws_route_table.PrivateRT.id
+ }
+ resource &quot;aws_eip&quot; &quot;nateIP&quot; {
+   vpc   = true
+ }
+ Creating the NAT Gateway using subnet_id and allocation_id
+   resource &quot;aws_nat_gateway&quot; &quot;NATgw&quot; {
+   allocation_id = aws_eip.nateIP.id
+   subnet_id = aws_subnet.publicsubnets.id
+ }
+</code></pre><p>2.Create a vars.tf</p>
+<pre><code>touch vars.tf
+</code></pre><p>Contents of this file:</p>
+<pre><code>variable &quot;region&quot; {}
+ variable &quot;main_vpc_cidr&quot; {}
+ variable &quot;public_subnets&quot; {}
+ variable &quot;private_subnets&quot; {}
+
+</code></pre><p>3.Now create a provider.tf</p>
+<p>Contents of this file are:</p>
+<pre><code> provider &quot;aws&quot; {
+   region = &quot;us-east-2&quot;
+   profile = default
+ }
+</code></pre><p>The profile = &ldquo;default&rdquo; command is a way for Terraform to get the AWS credentials i.e. access and secret keys.</p>
+<p>4.Last file to create is terraform.tfvars.</p>
+<pre><code>main_vpc_cidr = &quot;10.0.0.0/24&quot;
+ public_subnets = &quot;10.0.0.128/26&quot;
+ private_subnets = &quot;10.0.0.192/26&quot;
+
+</code></pre><h2 id="see-files-inside-the-directory">See files inside the directory</h2>
+<p>Use the command:</p>
+<pre><code>ls -l
+</code></pre><p><a href="https://asciinema.org/a/SoVAXNm1brFbOnimqhAVO06YZ"><img src="https://asciinema.org/a/SoVAXNm1brFbOnimqhAVO06YZ.svg" alt="asciicast"></a></p>
+<h2 id="run-terraform-to-create-vac">Run terraform to create vac</h2>
+<p><a href="https://asciinema.org/a/hxIfendPpQtnsD7usghXzQmbB"><img src="https://asciinema.org/a/hxIfendPpQtnsD7usghXzQmbB.svg" alt="asciicast"></a></p>
+<p>Got an error and to remove the error we need to remove the headings in the main.tf file .
+Error is <em>solved</em>.</p>
+<p><a href="https://asciinema.org/a/xcrxTPn2C0vWih57Zw6QGM0sa"><img src="https://asciinema.org/a/xcrxTPn2C0vWih57Zw6QGM0sa.svg" alt="asciicast"></a></p>
+<h2 id="next-perform-terraform-plan">Next perform terraform plan</h2>
+<p>We got an error as in the provider file I didn&rsquo;t put double quotes under profile. Error was resolved by :</p>
+<pre><code>profile=&quot;default&quot;
+</code></pre><h2 id="now-we-need-to-apply-the-changes">Now we need to apply the changes</h2>
+<pre><code>terraform apply
+</code></pre><p>terraform will read the configuration (main.tf) and the other files to compile a configuration. It will then send that configuration up to AWS as instructions to build the VPC.</p>
+<p><a href="https://asciinema.org/a/kbsCdVF8jN1BTGqViWcRuaaPx"><img src="https://asciinema.org/a/kbsCdVF8jN1BTGqViWcRuaaPx.svg" alt="asciicast"></a></p>
+
+    </div>
+</div>
+
+<div class="container">
+    
+    <nav class="flex container suggested">
+        
+        <a rel="prev" href="/posts/june29/" title="Previous post (older)">
+            <span>Previous</span>
+            JUNE29
+            </a>
+        
+        
+        
+    </nav>
+    
+</div>
+</main>
+
+
+        </main>
+        <footer class="footer flex">
+    <section class="container">
+        <nav class="footer-links">
+            
+        </nav>
+    </section>
+    
+    <script async src="/js/features.min.cb54200d744e5e9da0fa39e8ed570c19eac326f18a67904837ffada21795dfe2.js" data-enable-footnotes="true"></script>
+</footer>
+    </body>
+</html>
