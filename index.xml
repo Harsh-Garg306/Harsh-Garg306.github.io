@@ -5,7 +5,34 @@
     <description>Recent content on Hello</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Jul 2021 13:03:36 +0530</lastBuildDate><atom:link href="https://Harsh-Garg306.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Jul 2021 20:09:16 +0530</lastBuildDate><atom:link href="https://Harsh-Garg306.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+    <title>JULY9</title>
+    <link>https://Harsh-Garg306.github.io/posts/july9/</link>
+    <pubDate>Fri, 09 Jul 2021 20:09:16 +0530</pubDate>
+    
+    <guid>https://Harsh-Garg306.github.io/posts/july9/</guid>
+    <description>
+        &lt;h2 id=&#34;july-9&#34;&gt;JULY 9&lt;/h2&gt;
+&lt;h3 id=&#34;installed-kubectl&#34;&gt;Installed kubectl&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.20.4/2021-04-12/bin/darwin/amd64/kubectl
+
+chmod +x ./kubectl
+
+mkdir -p $HOME/bin &amp;amp;&amp;amp; cp ./kubectl $HOME/bin/kubectl &amp;amp;&amp;amp; export PATH=$HOME/bin:$PATH
+
+kubectl version --short --client
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://asciinema.org/a/DESgCU4A9fCTkJjkYZJgcBWeU&#34;&gt;&lt;img src=&#34;https://asciinema.org/a/DESgCU4A9fCTkJjkYZJgcBWeU.svg&#34; alt=&#34;asciicast&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Then we tried to make cluster using the following link:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.aws.amazon.com/eks/latest/userguide/create-cluster.html&#34;&gt;create an eks cluster&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;But we got an error and was not able to come out with solution:&lt;/p&gt;
+&lt;p&gt;Error: unable to determine AMI to use: error getting AMI from SSM Parameter Store: AccessDeniedException: User: arn:aws:iam::367704883367:user/f20190762@goa.bits-pilani.ac.in is not authorized to perform: ssm:GetParameter on resource: arn:aws:ssm:us-east-2::parameter/aws/service/eks/optimized-ami/1.19/amazon-linux-2/recommended/image_id
+status code: 400, request id: 97d70d24-e76a-4f41-924a-83d1bbd1ebbf. please verify that AMI Family is supported&lt;/p&gt;
+
+    </description>
+    </item>
+    
     <item>
     <title>GITREBASEvsMERGE</title>
     <link>https://Harsh-Garg306.github.io/posts/gitrebasevsmerge/</link>

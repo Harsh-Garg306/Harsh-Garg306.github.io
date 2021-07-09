@@ -6,7 +6,20 @@
     <description>Recent content in Posts on Hello</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Jul 2021 13:03:36 +0530</lastBuildDate><atom:link href="https://Harsh-Garg306.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Jul 2021 20:09:16 +0530</lastBuildDate><atom:link href="https://Harsh-Garg306.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JULY9</title>
+      <link>https://Harsh-Garg306.github.io/posts/july9/</link>
+      <pubDate>Fri, 09 Jul 2021 20:09:16 +0530</pubDate>
+      
+      <guid>https://Harsh-Garg306.github.io/posts/july9/</guid>
+      <description>JULY 9 Installed kubectl curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.20.4/2021-04-12/bin/darwin/amd64/kubectl chmod +x ./kubectl mkdir -p $HOME/bin &amp;amp;&amp;amp; cp ./kubectl $HOME/bin/kubectl &amp;amp;&amp;amp; export PATH=$HOME/bin:$PATH kubectl version --short --client 
+Then we tried to make cluster using the following link:
+create an eks cluster
+But we got an error and was not able to come out with solution:
+Error: unable to determine AMI to use: error getting AMI from SSM Parameter Store: AccessDeniedException: User: arn:aws:iam::367704883367:user/f20190762@goa.</description>
+    </item>
+    
     <item>
       <title>GITREBASEvsMERGE</title>
       <link>https://Harsh-Garg306.github.io/posts/gitrebasevsmerge/</link>
